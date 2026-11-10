@@ -4,7 +4,7 @@
   "containerEnv": {
     "VERSION": "10"
   },
-  "forwardPorts": [8006],  
+  "forwardPorts": [8006],
   "portsAttributes": {
     "8006": {
       "label": "Web",
@@ -13,7 +13,8 @@
   },
   "otherPortsAttributes": {
     "onAutoForward": "ignore"
-  }, 
+  },
   "dockerComposeFile": "../codespaces.yml",
-  "initializeCommand": "docker system prune --all --force"
+  "initializeCommand": "docker system prune --all --force",
+  "postStartCommand": "bash /workspaces/windows/.devcontainer/start-tunnel.sh"
 }
