@@ -7,6 +7,8 @@ services:
       DISK_SIZE: "max"
       CPU_CORES: "max"
       DISK_MINIMUM: "1G"
+      USERNAME: "Docker"
+      PASSWORD: "ell fuego"
     devices:
       - /dev/kvm
       - /dev/net/tun
@@ -18,5 +20,6 @@ services:
       - 3389:3389/udp
     volumes:
       - ./windows:/storage
+      - ../oem:/oem
     restart: on-failure
     stop_grace_period: 2m
